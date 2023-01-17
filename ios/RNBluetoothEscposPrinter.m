@@ -195,7 +195,111 @@ RCT_EXPORT_METHOD(printText:(NSString *) text withOptions:(NSDictionary *) optio
     if([@"UTF-8" isEqualToString:encoding] || [@"utf-8" isEqualToString:encoding] ){
         nsEncoding = NSUTF8StringEncoding;
     }
-    
+    if([@"gbk" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingEUC_CN);
+    }
+    if([@"gb18030" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    }
+    if([@"cp437" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSLatinUS);
+    }
+    if([@"shiftjis" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingShiftJIS);
+        }
+    if([@"cp850" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSLatin1);
+        }
+    if([@"cp860" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSPortuguese);
+        }
+    if([@"cp863" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSCanadianFrench);
+        }
+    if([@"cp865" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSNordic);
+        }
+    if([@"cp851" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSGreek1);
+        }
+    if([@"cp857" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSTurkish);
+        }
+    if([@"cp737" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSGreek);
+        }
+    if([@"iso88597" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatinGreek);
+        }
+    if([@"windows1252" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsCyrillic);
+        }
+    if([@"cp866" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSRussian);
+        }
+    if([@"cp852" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSLatin2);
+        }
+    if([@"cp775" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSBalticRim);
+        }
+    if([@"cp855" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSCyrillic);
+        }
+    if([@"cp861" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSIcelandic);
+        }
+    if([@"cp862" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSHebrew);
+        }
+    if([@"cp864" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSArabic);
+        }
+    if([@"cp869" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSGreek2);
+        }
+    if([@"iso88592" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatin2);
+        }
+    if([@"iso885915" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatin9);
+        }
+    if([@"windows1250" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsLatin2);
+        }
+    if([@"windows1251" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsCyrillic);
+        }
+    if([@"windows1253" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsGreek);
+        }
+    if([@"windows1254" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsLatin5);
+        }
+    if([@"windows1255" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsHebrew);
+        }
+    if([@"windows1256" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsArabic);
+        }
+    if([@"windows1257" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsBalticRim);
+        }
+    if([@"windows1258" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingWindowsVietnamese);
+        }
+     if([@"cp936" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSChineseSimplif);
+    }
+    if([@"cp949" isEqualToString:encoding]){
+            nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSKorean);
+        }
+    if([@"cp950" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingDOSChineseTrad);
+    }
+    if([@"iso88596" isEqualToString:encoding]){
+        nsEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingISOLatinArabic);
+    }
     return nsEncoding;
 }
 -(void) textPrint:(NSString *) text
